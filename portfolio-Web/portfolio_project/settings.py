@@ -30,7 +30,7 @@ if (len(sys.argv) >= 2 and sys.argv[1] == 'runserver'):
 else:
     DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1','franklingraham.tk']
+ALLOWED_HOSTS = ['127.0.0.1','whispering-willow-5678.herokudns.com']
 #franklin-fg.herokuapp.com
 
 
