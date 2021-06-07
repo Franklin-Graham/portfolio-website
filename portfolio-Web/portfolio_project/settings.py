@@ -29,7 +29,8 @@ if (len(sys.argv) >= 2 and sys.argv[1] == 'runserver'):
     DEBUG = True
 else:
     DEBUG = False
-
+# client = pymongo.MongoClient("mongodb+srv://franklin:<password>@franklin.j8xgl.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
+# db = client.test
 ALLOWED_HOSTS = ['127.0.0.1','franklin-fg.herokuapp.com']
 
 
