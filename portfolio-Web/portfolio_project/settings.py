@@ -29,8 +29,7 @@ if (len(sys.argv) >= 2 and sys.argv[1] == 'runserver'):
     DEBUG = True
 else:
     DEBUG = False
-# client = pymongo.MongoClient("mongodb+srv://franklin:<password>@franklin.j8xgl.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
-# db = client.test
+
 ALLOWED_HOSTS = ['127.0.0.1','franklin-fg.herokuapp.com']
 
 
@@ -84,8 +83,11 @@ WSGI_APPLICATION = 'portfolio_project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'portfolio',
+        'USER': 'root',
+        'PASSWORD': '',
+        
     }
 }
 
