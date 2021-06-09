@@ -92,6 +92,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
+        'Host': 'ec2-35-171-250-21.compute-1.amazonaws.com'
     }
 }
 
