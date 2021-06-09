@@ -33,18 +33,19 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-_$@p1lf7i3kbny(qls^et87xj0w2rhwggob@6p8^mxy&xbg+2e'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-if (len(sys.argv) >= 2 and sys.argv[1] == 'runserver'):
-    DEBUG = True
-else:
-    DEBUG = False
+# if (len(sys.argv) >= 2 and sys.argv[1] == 'runserver'):
+#     DEBUG = True
+# else:
+DEBUG = False
 
-# ALLOWED_HOSTS = ['127.0.0.1','franklin-fg.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1','franklin-fg.herokuapp.com']
 
-ALLOWED_HOSTS = ['*']
+
 # Application definition
 
 INSTALLED_APPS = [
     'portfolio_app',
+    'whitenoise.runserver_nostatic',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -90,15 +91,16 @@ WSGI_APPLICATION = 'portfolio_project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',        
-        'User' : 'wjkgdjnsfdkgnl',
-        'Password': '3ba6203a8437754e50160121b378368a6e3608bc8a5ceb691df0ed363f851ff7',
-        'Host': 'ec2-35-171-250-21.compute-1.amazonaws.com',
-        'Port': 5432
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'd9llbj6i0uv7ur',        
+        'USER' : 'wjkgdjnsfdkgnl',
+        'PASSWORD': '3ba6203a8437754e50160121b378368a6e3608bc8a5ceb691df0ed363f851ff7',
+        'HOST': 'ec2-35-171-250-21.compute-1.amazonaws.com',
+        'PORT': '5432',
     }
 }
 
+WHITENOISE_USE_FINDERS = True
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.sqlite3',
@@ -111,8 +113,8 @@ DATABASES = {
 
 
 # import dj_database_url
-# db_form_env = dj_database_url.config(conn_max_age=600)
-# DATABASES['default'].update(db_form_env)
+db_form_env = dj_database_url.config(conn_max_age=600)
+DATABASES['default'].update(db_form_env)
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
@@ -148,7 +150,7 @@ USE_TZ = True
 
 #DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
 #DATABASES['default'] = dj_database_url.config(default='postgres://...')
-DATABASES['default'] = dj_database_url.config('postgres://wjkgdjnsfdkgnl:3ba6203a8437754e50160121b378368a6e3608bc8a5ceb691df0ed363f851ff7@ec2-35-171-250-2')
+#DATABASES['default'] = dj_database_url.config('postgres://wjkgdjnsfdkgnl:3ba6203a8437754e50160121b378368a6e3608bc8a5ceb691df0ed363f851ff7@ec2-35-171-250-2')
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 #, ssl_require=True
@@ -159,7 +161,7 @@ STATIC_ROOT = os.path.join(BASE_DIR,'assets')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 
-# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
