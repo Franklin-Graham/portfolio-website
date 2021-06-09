@@ -17,7 +17,7 @@ import dj_database_url
 import django_heroku
 url:'postgres://wjkgdjnsfdkgnl:3ba6203a8437754e50160121b378368a6e3608bc8a5ceb691df0ed363f851ff7@ec2-35-171-250-2'
 
-
+url = dj_database_url.parse(url)
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
