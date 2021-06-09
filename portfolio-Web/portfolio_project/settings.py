@@ -17,7 +17,7 @@ import dj_database_url
 import django_heroku
 url:'postgres://wjkgdjnsfdkgnl:3ba6203a8437754e50160121b378368a6e3608bc8a5ceb691df0ed363f851ff7@ec2-35-171-250-2'
 
-url = dj_database_url.parse(url)
+
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -91,7 +91,7 @@ WSGI_APPLICATION = 'portfolio_project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'd9llbj6i0uv7ur',
+        'NAME': BASE_DIR / 'db.sqlite3',        
         'User' : 'wjkgdjnsfdkgnl',
         'Password': '3ba6203a8437754e50160121b378368a6e3608bc8a5ceb691df0ed363f851ff7',
         'Host': 'ec2-35-171-250-21.compute-1.amazonaws.com',
@@ -103,6 +103,7 @@ DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.sqlite3',
 #         'NAME': BASE_DIR / 'db.sqlite3',
+#         'NAME': 'd9llbj6i0uv7ur',
 #     }
 # }
 
