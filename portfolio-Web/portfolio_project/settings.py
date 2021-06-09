@@ -95,12 +95,12 @@ DATABASES = {
         'NAME': 'd9llbj6i0uv7ur',        
         'USER' : 'wjkgdjnsfdkgnl',
         'PASSWORD': '3ba6203a8437754e50160121b378368a6e3608bc8a5ceb691df0ed363f851ff7',
-        'HOST': 'ec2-35-171-250-21.compute-1.amazonaws.com',
-        'PORT': '5432',
+        'HOST': 'localhost',
+        'PORT': '',
     }
 }
 
-WHITENOISE_USE_FINDERS = True
+
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.sqlite3',
@@ -109,12 +109,10 @@ WHITENOISE_USE_FINDERS = True
 #     }
 # }
 
-
-
-
-# import dj_database_url
-db_form_env = dj_database_url.config(conn_max_age=600)
+db_form_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_form_env)
+
+WHITENOISE_USE_FINDERS = True
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
