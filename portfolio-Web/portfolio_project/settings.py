@@ -146,7 +146,7 @@ USE_L10N = True
 
 USE_TZ = True
 
-DATABASES['default'].update(dj_database_url.config(conn_max_age=10000))
+DATABASES['default'].update(dj_database_url.config(url))
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 #, ssl_require=True
