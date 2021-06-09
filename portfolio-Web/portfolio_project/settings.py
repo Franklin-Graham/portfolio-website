@@ -38,9 +38,9 @@ if (len(sys.argv) >= 2 and sys.argv[1] == 'runserver'):
 else:
     DEBUG = False
 
+# ALLOWED_HOSTS = ['127.0.0.1','franklin-fg.herokuapp.com']
+
 ALLOWED_HOSTS = ['127.0.0.1','franklin-fg.herokuapp.com']
-
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -145,7 +145,7 @@ USE_L10N = True
 
 USE_TZ = True
 
-# DATABASES['default'].update(dj_database_url.config(conn_max_age=500))
+DATABASES['default'].update(dj_database_url.config(conn_max_age=10000))
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 #, ssl_require=True
