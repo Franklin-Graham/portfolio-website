@@ -40,7 +40,7 @@ else:
 
 # ALLOWED_HOSTS = ['127.0.0.1','franklin-fg.herokuapp.com']
 
-ALLOWED_HOSTS = ['127.0.0.1','franklin-fg.herokuapp.com']
+ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
@@ -148,7 +148,7 @@ USE_TZ = True
 
 #DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
 #DATABASES['default'] = dj_database_url.config(default='postgres://...')
-DATABASES['default'] = dj_database_url.config(default='postgres://wjkgdjnsfdkgnl:3ba6203a8437754e50160121b378368a6e3608bc8a5ceb691df0ed363f851ff7@ec2-35-171-250-2', conn_max_age=600)
+DATABASES['default'] = dj_database_url.config(default='postgres://wjkgdjnsfdkgnl:3ba6203a8437754e50160121b378368a6e3608bc8a5ceb691df0ed363f851ff7@ec2-35-171-250-2')
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 #, ssl_require=True
