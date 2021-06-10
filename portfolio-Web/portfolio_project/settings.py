@@ -35,9 +35,9 @@ SECRET_KEY = 'django-insecure-_$@p1lf7i3kbny(qls^et87xj0w2rhwggob@6p8^mxy&xbg+2e
 # else:
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1','franklin-fg.herokuapp.com']
+ALLOWED_HOSTS = ['*']
 
-
+# ALLOWED_HOSTS = ['127.0.0.1','franklin-fg.herokuapp.com']
 # Application definition
 
 INSTALLED_APPS = [
@@ -172,8 +172,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 # django_heroku.settings(locals())
-
-# DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 
