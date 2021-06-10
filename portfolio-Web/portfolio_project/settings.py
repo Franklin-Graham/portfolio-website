@@ -42,7 +42,6 @@ ALLOWED_HOSTS = ['127.0.0.1','franklin-fg.herokuapp.com']
 
 INSTALLED_APPS = [
     'portfolio_app',
-    'whitenoise.runserver_nostatic',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
