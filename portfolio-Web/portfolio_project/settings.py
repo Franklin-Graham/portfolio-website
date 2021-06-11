@@ -13,7 +13,7 @@ import sys
 import dj_database_url
 import django_heroku
 
-
+import socket
 
 
 
@@ -33,7 +33,22 @@ SECRET_KEY = 'django-insecure-_$@p1lf7i3kbny(qls^et87xj0w2rhwggob@6p8^mxy&xbg+2e
 # if (len(sys.argv) >= 2 and sys.argv[1] == 'runserver'):
 #     DEBUG = True
 # else:
-DEBUG = True
+#DEBUG = True
+
+
+
+
+if socket.gethostname() == "server_name":
+    DEBUG = False
+    ALLOWED_HOSTS = ['127.0.0.1','franklin-fg.herokuapp.com']
+    
+else:
+    DEBUG = True
+    ALLOWED_HOSTS = ["localhost", "127.0.0.1",]
+
+
+
+
 
 #ALLOWED_HOSTS = ['*']
 ALLOWED_HOSTS = ['127.0.0.1','franklin-fg.herokuapp.com']
