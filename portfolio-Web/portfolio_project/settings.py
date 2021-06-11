@@ -33,11 +33,10 @@ SECRET_KEY = 'django-insecure-_$@p1lf7i3kbny(qls^et87xj0w2rhwggob@6p8^mxy&xbg+2e
 # if (len(sys.argv) >= 2 and sys.argv[1] == 'runserver'):
 #     DEBUG = True
 # else:
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['*']
-
-# ALLOWED_HOSTS = ['127.0.0.1','franklin-fg.herokuapp.com']
+#ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['127.0.0.1','franklin-fg.herokuapp.com']
 # Application definition
 
 INSTALLED_APPS = [
