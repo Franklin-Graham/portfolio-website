@@ -38,7 +38,7 @@ SECRET_KEY = 'django-insecure-_$@p1lf7i3kbny(qls^et87xj0w2rhwggob@6p8^mxy&xbg+2e
 
 
 
-if socket.gethostname() == "server_name":
+if socket.gethostname() == "heroku":
     DEBUG = False
     ALLOWED_HOSTS = ['127.0.0.1','franklin-fg.herokuapp.com']
     
