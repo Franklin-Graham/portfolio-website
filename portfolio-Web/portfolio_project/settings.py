@@ -33,18 +33,18 @@ SECRET_KEY = 'django-insecure-_$@p1lf7i3kbny(qls^et87xj0w2rhwggob@6p8^mxy&xbg+2e
 # if (len(sys.argv) >= 2 and sys.argv[1] == 'runserver'):
 #     DEBUG = True
 # else:
-#DEBUG = True
+DEBUG = False
 
 
 
 
-if socket.gethostname() == "heroku":
+"""if socket.gethostname() == "heroku":
     DEBUG = False
     ALLOWED_HOSTS = ['127.0.0.1','franklin-fg.herokuapp.com']
     
 else:
     DEBUG = True
-    ALLOWED_HOSTS = ["localhost", "127.0.0.1",]
+    ALLOWED_HOSTS = ["localhost", "127.0.0.1",]"""
 
 
 
@@ -181,7 +181,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 
 
 # django_heroku.settings(locals())
-# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
