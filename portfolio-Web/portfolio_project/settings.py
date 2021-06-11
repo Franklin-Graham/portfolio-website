@@ -13,7 +13,6 @@ import sys
 import dj_database_url
 import django_heroku
 
-import socket
 
 
 
