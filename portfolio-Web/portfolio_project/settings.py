@@ -30,8 +30,14 @@ SECRET_KEY = 'django-insecure-_$@p1lf7i3kbny(qls^et87xj0w2rhwggob@6p8^mxy&xbg+2e
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-#DEBUG = False
+DEBUG = False
 
+
+if DEBUG:
+    STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+
+else:
+    STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 
 
@@ -106,6 +112,7 @@ WSGI_APPLICATION = 'portfolio_project.wsgi.application'
 #         'PORT': '5432',
 #     }
 # }
+
 DATABASES = {
      'default': dj_database_url.config()
 }
@@ -173,7 +180,8 @@ STATIC_URL = '/static/'
 #STATIC_ROOT = os.path.join(BASE_DIR,'assets')
 MEDIA_URL = '/media/'
 #MEDIA_ROOT = os.path.join(BASE_DIR,'media')
-if DEBUG == False:
+
+if DEBUG:
     STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
 else:
